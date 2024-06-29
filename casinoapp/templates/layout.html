@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Blackjack online using flask framework">
+    <meta name="author" content="Mat Taylor">
+    <title>Mum's Casino - {{title}}</title>
+<!--    <link href="static/styles/common.css" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link rel="stylesheet" href="static/styles/game.css">
+    <link rel="stylesheet" href="static/styles/common.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <link rel="icon" href="static/img/logo_apple_touch_icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="static/img/logo_apple_touch_icon.png">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+  </head>
+
+  <body>
+    <!-- <img src="/static/img/bj_table_background.jpg" alt="home page background" width="100%" height="100%"> -->
+    <script src="static/scripts/script.js">
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <nav class="navbar">
+      <!-- Homepage Link-->
+          <a class="navbar-item float-left nav-link" href="{{ url_for('index') }}" style="padding:0px;">
+            <img src="static/img/mums_casino_logo_cropped.png" alt="casino logo" style="object-fit:contain;height:100%;">
+          </a>
+<!--      </div>-->
+      <!-- About Link -->
+<!--      <div class="navbar-item">-->
+        <a class="navbar-item float-left nav-link" href="{{ url_for('about') }}">About</a>
+        <a class="navbar-item float-left nav-link" href="{{ url_for('games') }}">Games</a>
+<!--      </div>-->
+
+      <!-- Right Side Links -->
+      {% if current_user.is_authenticated %}
+        <div id="nav-user-profile" class="navbar-item float-right" visible="false">
+            <div id="nav-up-btn">
+                <img src="static/img/user_pfp/{{ current_user.image_file }}" alt="profile picture" class="user-pfp">
+                <span id="nav-up-dd-arrow" class="dropdown-arrow"><i class="fa-solid fa-caret-down"></i></span>
+            </div>
+
+          <div id="nav-up-dropdown" class="dropdown">
+            <a class="dropdown-link" href="{{url_for('account')}}">Account</a>
+            <a class="dropdown-link" href="{{url_for('logout')}}">Log Out</a>
+          </div>
+        </div>
+
+        <div id="nav-user-info" class="navbar-item float-right nav-info">
+          <div style="text-align:end;">
+            {{ current_user.username }} <br>
+            ${{ current_user.balance }}
+          </div>
+        </div>
+
+
+
+
+        <!-- Account Link -->
+  <!--      <div class="navbar-item float-right">-->
+<!--          <a class="navbar-item nav-link float-right" href="{{ url_for('account') }}">Account</a>-->
+  <!--      </div>-->
+
+        <!-- Log out Link -->
+  <!--      <div class="navbar-item float-right">-->
+<!--          <a class="navbar-item nav-link float-right" href="{{ url_for('logout') }}">Log Out</a>-->
+  <!--      </div>-->
+      {% else %}
+        <!-- Sign Up Link -->
+        <a class="navbar-item nav-link float-right" href="{{ url_for('signup') }}">Sign Up</a>
+
+        <!-- Login Link -->
+        <a class="navbar-item nav-link float-right" href="{{ url_for('login') }}">Login</a>
+      {% endif %}
+
+    </nav>
+
+
+    <main>
+      {% block main %}
+      {% endblock %}
+    </main>
+
+   </body>
+
+</html>

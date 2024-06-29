@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block main %}
+  <h1 style="color:white;"><center>Our Games</center></h1>
+
+  {% include "gamenavbar.html" %}
+
+  <!-- Slider main container -->
+  <div class="swiper nigmajig">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <a class="swiper-slide yoo" href="/"><div>Blackjack</div></a>
+      <a class="swiper-slide" href="/"><div>Poker</div></a>
+      <a class="swiper-slide" href="/"><div></div></a>
+      <a class="swiper-slide" href="/"><div>Slide 4</div></a>
+      <a class="swiper-slide" href="/"><div>Slide 5</div></a>
+      <a class="swiper-slide" href="/"><div>Slide 6</div></a>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  <!-- </div> -->
+
+  <script src='static/scripts/game.js'></script>
+
+
+
+  
+
+{% endblock main %}

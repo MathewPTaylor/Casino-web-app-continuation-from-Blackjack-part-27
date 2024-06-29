@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sockets</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+</head>
+<body>
+  <!-- <script src="casinoapp/static/scripts/sockethub.js"></script> -->
+
+  <script>
+    $(document).ready(function() {
+      var socket = io.connect('https://9c390d0a-dbf1-4996-92d8-bc663f3abf4d-00-352k79aiasl2l.picard.replit.dev/');
+
+      socket.on("connect", function() {
+        socket.send("a user connected.");
+      });
+
+      socket.on("message", message=>{
+        let container = document.getElementById("message-container");
+        console.log(container);
+        container.innerHTML += `<p>${message}</p>`
+      });
+
+      function send_message(message, username) {
+        socket.send(`${username}: ${message}`);
+      }
+      
+      $("#send-btn").click(()=>{
+        let username = document.getElementById("username-input").value;
+        if (username == "") {
+          username = "anonymous";
+        }
+        
+        let message_to_send = document.getElementById("message-input").value;
+        
+        send_message(message_to_send, username);
+        console.log(socket);
+        // alert("click");
+      });
+    });
+  </script>
+
+  <div id="message-container">
+    
+  </div>
+
+  
+  <input id="username-input" type="text" placeholder="Username">
+  <input id="message-input" type="text" placeholder="Enter a message">
+  <!-- <input id="username-input" type="text"> -->
+  <button id="send-btn">Send</button>
+  
+  
+</body>
+</html>

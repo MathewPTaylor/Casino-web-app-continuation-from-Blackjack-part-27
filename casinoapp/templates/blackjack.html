@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/6e13a45840.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='styles/game.css')}}">
+</head>
+<body>
+  <script src="/static/scripts/sockethub.js"></script>
+  <script src="/static/scripts/games_logic/blackjack.js"></script>
+  
+  <div class="background-table">
+    <svg width="100%" height="100%"   xmlns="http://www.w3.org/2000/svg" style="position:absolute;z-index:-1;">
+      <rect width="100%" height="100%"></rect>
+      <!-- Table -->
+      <circle cx="50%" cy="0" r="65%" fill="green" stroke="saddlebrown" stroke-width="2%" id="svg-bj-table"></circle>
+
+      <!-- Chairs -->
+      <!-- <rect x="50%" y="10%" width="14%" height="14%" border-radius="0.2em"></rect> -->
+      <!-- <circle class="chair1" cx="50%" cy="%" r="6%" fill="#456" stroke="#333" stroke-width="1%"></circle> -->
+      
+    </svg>
+  </div>
+
+  <div id="messaging-stuff">
+      <div id="message-container">
+
+      </div>
+
+
+      <input id="username-input" type="text" placeholder="Username">
+      <input id="message-input" type="text" placeholder="Enter a message">
+      <!-- <input id="username-input" type="text"> -->
+      <button id="send-btn">Send</button>
+  </div>
+  
+
+  <div class="player-profile-container">
+    <div class="player-info-disp" id="player1-disp" style="bottom:0%;">
+      <div class="player-pfp">
+      </div>
+
+      <div class="player-info">
+        User123 <br>
+        $1234.5678943
+      </div>
+    </div>
+
+    <div class="player-info-disp" id="player2-disp">
+      <div class="player-pfp">
+      </div>
+
+      <div class="player-info">
+        User123 <br>
+        $1234.5678943
+      </div>
+    </div>
+
+    <div class="player-info-disp" id="player3-disp">
+      <div class="player-pfp">
+      </div>
+
+      <div class="player-info">
+        User123 <br>
+        $1234.5678943
+      </div>
+    </div>
+  </div>
+  
+
+  
+</body>
+</html>

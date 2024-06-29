@@ -1,0 +1,44 @@
+{% extends "formtemplate.html" %}
+{% block content %}
+    {{ form.hidden_tag() }}
+<!--      <legend>{{ title }}</legend>-->
+        <center><h2 style="margin: 0.5em 0em 1.5em 0em;">Login</h2></center>
+<!--        {{ form.email.label }} <br>-->
+        {% if form.email.errors %}
+          {{ form.email(class="form-field input-field is-invalid", placeholder="Email") }}
+          <div class="invalid-feedback">
+              {% for error in form.email.errors %}
+                <span style="color:red;"> {{ error }}</span>
+              {% endfor %}
+          </div>
+        {% else %}
+            {{ form.email(class="form-field input-field", placeholder="Email") }}
+        {% endif %}
+      <!-- Username -->
+
+<!--        {{ form.password.label }} <br>-->
+        {% if form.password.errors %}
+          {{ form.password(class="form-field input-field is-invalid", placeholder="Password") }}
+          <div class="invalid-feedback">
+              {% for error in form.password.errors %}
+                <span style="color:red;"> {{ error }}</span>
+              {% endfor %}
+          </div>
+        {% else %}
+            {{ form.password(class="form-field input-field", placeholder="Password") }}
+        {% endif %}
+
+      <!-- Password -->
+      <div style="margin:0.2em 0.1em;">
+        {{ form.remember.label }}<!--
+     -->{{ form.remember }}
+        <a href="{{url_for('forgot_password')}}" style="float: inline-end;font-size:small;cursor:pointer;color:rebeccapurple;">Forgot Password?</a>
+      </div> <!-- Remember -->
+
+      <!-- Submit -->
+      {{ form.submit(class="form-submit form-field") }}
+
+    <div class="redirect-text">
+      Need an account? <a href="{{url_for('signup')}}">Sign up</a>
+    </div>
+{% endblock content %}

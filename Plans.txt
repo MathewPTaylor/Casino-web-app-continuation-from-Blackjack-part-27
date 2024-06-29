@@ -1,0 +1,55 @@
+PLANS FOR CASINO WEB APP:
+we want a MINIMUM VIABLE PRODUCT FIRST.
+So the small things like the free spins when you sign up, we can do that later.
+
+1. finish the login system
+  a. make a login and signup page
+  b. use flask-login for the login system
+
+2. design and make the home page
+  a. make a navigation bar
+    i. have links for different pages i.e. about, games, home page
+    ii. have a dropdown for the user to view their account or logout
+  b. design smth to fill the rest of the page
+    i. a sliding promo thing
+    ii. a latest winner scrolling text
+    iii. have a latest news about the casino section
+
+3. design and make a database schema that will accommodate what i have in mind (what i have in mind can change)
+  a. have a 'User' table, to store users and their info
+  b. a 'Wins' table, to store the wins that any player makes, possibly can be used to catch cheaters?
+  c. a 'Losses' table, to store the loss that a player makes.
+  d. a 'Tables' table, to store all the game tables for the casino 
+
+4. design and make the games page (the page where you browse the games)
+  a. have a another nav bar in the main section with different types of games
+
+5. figure out how to show the available tables for each game to the end-user
+  a. 
+
+6. design and make the account page (users can change pfp and look at other information about their account)
+  a. have a vertical nav bar on the left side and the contents for each nav option will fill the rest of the page
+
+7. make an admin page where an admin can perform admin tasks
+  a. kick players out of games
+  b. ban players
+  c. etc.
+%6. design and make each game 'page'
+%  a. each game will have different bet amounts
+%  b. each table will be displayed 
+
+
+Games to make:
+1. Blackjack
+2. Poker (prolly different types)
+3. Sports betting (different sports)
+4. Slots (make it seem legit)
+5. Roulette
+6. Baccarat
+
+
+Current:
+1. trying to figure out how to query available tables from the database and displaying it on the frontend
+
+*DONE* 1. Finish designing home page on Paint (file prolly somewhere in 'Mathew' folder)
+*DONE* 2. finish profile with the dropdown, section

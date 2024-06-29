@@ -1,0 +1,97 @@
+/* html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ff361c;
+  background-image: url("/static/img/login_background.jpeg");
+  font-family: "Lucida Console", monospace;
+} */
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.right-1 {
+    right: 1em;
+}
+
+.left-1 {
+    left: 1em;
+}
+
+.fw-bolder {
+    font-weight: bolder;
+}
+
+.flex {
+  display: flex;
+}
+
+.white {
+  color: white;
+}
+
+.w-50-percent {
+  width: 50%;
+}
+
+.abs {
+  position: absolute;
+}
+
+.btm-0 {
+  bottom: 0%;
+}
+
+.right-0 {
+  right: 0%;
+}
+
+.message-success {
+    display: block;
+    position: relative;
+    width: inherit;
+    height: 3em;
+    background: #33ee5577;
+    text-align: center;
+}
+
+.message-danger {
+    display: block;
+    position: relative;
+    width: inherit;
+    height: 3em;
+    background: #ee342377;
+    text-align: center;
+}
+
+.swiper{
+  width: 100%;
+  height: 25rem;
+}
+
+.nigmajig {
+  width: 90%;
+}
+
+.swiper-slide {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  display: flex;
+  /* background-position: center; */
+}
+
+.swiper-button-prev {
+  color: white;
+}
+
+.slide-dimensions {
+  width: 20rem;
+  height: 100%;
+  max-width: 100%;
+  min-width: 50%;
+}

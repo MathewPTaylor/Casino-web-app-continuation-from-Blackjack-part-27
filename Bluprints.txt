@@ -1,0 +1,8 @@
+
+
+
+Resetting a Password:
+1. user inputs email
+2. send resetting link to user's email
+3. user clicks on link, which redirects them to a page to reset their password (webstie url will contain userid, so it can be pulled to access the database. We gotta find a way to prevent someone just inputting a random id and change a random person's password)
+4. password for that use is changed to the new password

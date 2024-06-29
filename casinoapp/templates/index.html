@@ -1,0 +1,176 @@
+{% extends 'layout.html' %}
+{% block main %}
+  <!-- Slider main container -->
+  <div class="swiper promo">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" style="opacity: 0.9;background: url('static/img/roulette wheel background resized.png');background-size: 100% 150%;background-position: 0em -6em;
+      }">       <div class="sliding-promo-content-wrapper">
+                    <p class="sliding-promo-content">
+                        Join Today <br>
+                        for 50 <br>
+                        <span style="color:gold;">FREE SPINS</span> <br>
+                        <a href="{{ url_for('signup') }}" class="sp-anchor-btn">
+                          Join Now
+                        </a>
+                    </p>
+                </div>
+            </div>
+      <div class="swiper-slide" style="opacity: 0.9;background: url('static/img/roulette wheel background resized.png');background-size: 100% 150%;background-position: 0em -6em;
+      }">
+                <div class="sliding-promo-content-wrapper">
+                    <p class="sliding-promo-content">
+                        Join Tomorrow <br>
+                        for 50 <br>
+                        <span style="color:gold;">FREE SPINS</span> <br>
+                        <a href="{{ url_for('signup') }}" class="sp-anchor-btn">
+                          Join Now
+                        </a>
+                    </p>
+                </div>
+            </div>
+      
+      <div class="swiper-slide" style="opacity: 0.9;background: url('static/img/roulette wheel background resized.png');background-size: 100% 150%;background-position: 0em -6em;
+      }">
+                <div class="sliding-promo-content-wrapper">
+                    <p class="sliding-promo-content">
+                        Join on Sunday <br>
+                        for 50 <br>
+                        <span style="color:gold;">FREE SPINS</span> <br>
+                        <a href="{{ url_for('signup') }}" class="sp-anchor-btn">
+                          Join Now
+                        </a>
+                    </p>
+                </div>
+            </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev white" style="color: white;"></div>
+    <div class="swiper-button-next white" style="color: white;"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+
+  <div class="sliding-promo-wrapper" style="display: none;">
+      <!-- Left arrow -->
+      <svg id="sp-prev-arrow" class="sp-arrow left-1" xmlns="http://www.w3.org/2000/svg" width="23" height="47" viewBox="0 0 23 47" fill="none">
+          <line y1="-1.125" x2="28.9928" y2="-1.125" transform="matrix(-0.658505 -0.752577 -0.658505 0.752577 21.2739 46.3254)" stroke="white" stroke-width="2.25"/>
+          <line y1="-1.125" x2="28.9928" y2="-1.125" transform="matrix(-0.658505 0.752577 0.658505 0.752577 21.2739 2.5771)" stroke="white" stroke-width="2.25"/>
+      </svg>
+
+      <!-- Right arrow -->
+      <svg id="sp-next-arrow" class="sp-arrow right-1" xmlns="http://www.w3.org/2000/svg" width="23" height="47" viewBox="0 0 23 47" fill="none">
+          <line y1="-1.125" x2="28.9928" y2="-1.125" transform="matrix(0.658505 -0.752577 0.658505 0.752577 2.18201 46.3254)" stroke="white" stroke-width="2.25"/>
+          <line y1="-1.125" x2="28.9928" y2="-1.125" transform="matrix(0.658505 0.752577 -0.658505 0.752577 2.18201 2.5771)" stroke="white" stroke-width="2.25"/>
+      </svg>
+
+      <div class="sliding-promo-rails">
+          <div class="sliding-promo-item" style="opacity: 0.9;background: url('static/img/roulette wheel background resized.png');background-size: 100% 150%;background-position: 0em -6em;
+    }">       <div class="sliding-promo-content-wrapper">
+                  <p class="sliding-promo-content">
+                      Join Today <br>
+                      for 50 <br>
+                      <span style="color:gold;">FREE SPINS</span> <br>
+                      <a href="{{ url_for('signup') }}" class="sp-anchor-btn">
+                        Join Now
+                      </a>
+                  </p>
+              </div>
+          </div>
+
+          <div class="sliding-promo-item" style="opacity: 0.9;background: url('static/img/roulette wheel background resized.png');background-size: 100% 150%;background-position: 0em -6em;
+    }">
+              <div class="sliding-promo-content-wrapper">
+                  <p class="sliding-promo-content">
+                      Join Tomorrow <br>
+                      for 50 <br>
+                      <span style="color:gold;">FREE SPINS</span> <br>
+                      <a href="{{ url_for('signup') }}" class="sp-anchor-btn">
+                        Join Now
+                      </a>
+                  </p>
+              </div>
+          </div>
+
+          <div class="sliding-promo-item" style="opacity: 0.9;background: url('static/img/roulette wheel background resized.png');background-size: 100% 150%;background-position: 0em -6em;
+    }">
+              <div class="sliding-promo-content-wrapper">
+                  <p class="sliding-promo-content">
+                      Join on Sunday <br>
+                      for 50 <br>
+                      <span style="color:gold;">FREE SPINS</span> <br>
+                      <a href="{{ url_for('signup') }}" class="sp-anchor-btn">
+                        Join Now
+                      </a>
+                  </p>
+              </div>
+          </div>
+
+      </div>
+  </div>
+
+  <div id="latest-winners" class="latest-winners">
+      <div class="latest-winners-title">
+            <div class="latest-winners-title-text">
+                Latest&nbsp;<span style="color: gold;font-weight:bold;">Winners</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="39" height="46" viewBox="0 0 39 46" fill="none" style="height:100%;">
+                <path d="M39 23.0022L0 45.5188V0.485502L39 23.0022Z" fill="#DE3907"/>
+            </svg>
+      </div>
+      <div class="scrolling-text-wrapper">
+          <!-- Format: '<amount> <username> on <game>' -->
+          <!-- Example: '$123 Username123 on Blackjack'-->
+        <div class="scrolling-text">
+          <li class="lw-item-info"><span id="lw-win-amount-disp-1" class="lw-standout-text">$123</span> Username123 on <span id="lw-game-won-disp-1" class="fw-bolder">Blackjack</span></li>
+          <li class="lw-item-info"><span id="lw-win-amount-disp-2" class="lw-standout-text">$12345.67</span> Yahaya.com on <span id="lw-game-won-disp-2" class="fw-bolder">Poker Circus</span></li>
+        </div>
+      </div>
+  </div>
+
+  <div id="background-news">
+
+  </div>
+
+  <div class="news-wrapper">
+      <div class="news-title">
+          <span style="font-weight:bold;">What's on</span> at Mums Casino
+      </div>
+
+      <div class="news-feed">
+          <div class="story-block">
+              <img src="static/img/test_image.png" alt="story cover" class="story-cover-img">
+              <div class="story-headline">
+
+              </div>
+          </div>
+
+          <div class="story-block">
+              <img src="static/img/test_image.png" alt="story cover" class="story-cover-img">
+              <small>Story bla bla</small>
+          </div>
+
+          <div class="story-block">
+              <img src="static/img/test_image.png" alt="story cover" class="story-cover-img">
+              <small>Story bla bla</small>
+          </div>
+      </div>
+
+  </div>
+
+  {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+          {% for category, message in messages %}
+              <div class="message-{{category}}">
+                  {{ message }}
+              </div>
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+{% endblock main %}

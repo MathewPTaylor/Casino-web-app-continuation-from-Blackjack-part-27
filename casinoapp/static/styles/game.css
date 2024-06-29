@@ -1,0 +1,204 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /* background-color: #ff361c; */
+  /* background-image: url("/static/img/login_background.jpeg"); */
+  font-family: "Lucida Console", monospace;
+  /* overflow: scroll; */
+}
+
+#game-genre-btn-wrapper:hover {
+  background-color: unset;
+}
+
+.game-genre-btn {
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0em 0em;
+  color: whitesmoke;
+  transition: 0.15s ease;
+}
+
+.selected-btn {
+  background-color: var(--navbarhovcol)
+}
+
+.game-icon-wrapper {
+  width: 100%;
+  text-align: center;
+  font-size: 1.7em;
+  color: #fff;
+}
+
+.game-genre-title {
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+.game-search-bar-wrapper {
+  display: flex;
+  height: 4em;
+  width: 30em;
+  min-width: 10em;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 90%;
+  height: 3em;
+  color: whitemsmoke;
+  border-radius: 0.5em;
+  font-size: 0.9rem;
+  padding-left: 0.4em;
+}
+
+.games-page-holder {
+  display: block;
+  width: 100%;
+  height: 50em;
+  overflow: hidden;
+  background-color: var(--navbarhovcol);
+}
+
+.games-disp {
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  /* background-color: greenyellow; */
+  overflow: hidden;
+  padding: 0.4em;
+}
+
+.yoo {
+  /* background-image: linear-gradient(45deg, black, transparent); */
+  background-image: url('/static/img/Blackjack_bg.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  margin: 0.5em 0em;
+  padding-right: 0.1em;
+}
+.dropdown-wrapper label {
+  color: whitesmoke;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.dropdown-wrapper select {
+  margin: 0em 0.7em;
+}
+
+.table-grid {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+
+  /* Grid Styles */
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-template-rows: repeat(auto-fit, 10rem);
+  grid-auto-rows: 10rem;
+  grid-auto-columns: minmax(235px, 1fr);
+  grid-gap: 0.6em;
+}
+
+.grid-item {
+  position: relative;
+  border-radius: 0.5em;
+  transition: 0.25s ease;
+  animation-iteration-count: 1;
+  animation-duration: 0.7s;
+  animation-name: grid-item-fade-in;
+}
+
+@keyframes grid-item-fade-in {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.grid-item > * {
+  position: absolute;
+  color: whitesmoke;
+  margin: 0.5em;
+}
+
+.table-grid-instance-title {
+  font-size: 1.35em;
+  font-weight: bold;
+}
+
+.table-betrange-disp {
+  bottom: 0%;
+}
+
+.table-players-disp {
+  bottom: 0%;
+  right: 0%;
+}
+
+.player-info-disp {
+  display: flex;
+  position: absolute;
+  width: fit-content;
+  background-color: red;
+  font-size: 1em;
+  color: whitesmoke;
+  align-items: center;
+  right: 0%;
+  padding: 0em 0.2em;
+}
+
+.player-profile-container {
+  /* position: fixed; */
+  width: fit-content;
+  height: fit-content;
+  background-color: green;
+}
+
+#player1-disp {
+  position: fixed;
+  z-index: 2;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#player2-disp {
+  position: fixed;
+  z-index: 2;
+  bottom: 17%;
+  right: 1%;
+}
+
+#player3-disp {
+  position: fixed;
+  z-index: 2;
+  left: 1%;
+  bottom: 17%;
+  
+}
+
+.player-pfp {
+  width: 5.5em;
+  height: 5.5em;
+  border-radius: 5.5em;
+  background-color: grey;
+}
+
+.player-info {
+  margin-left: 0.4em;
+}
