@@ -8,3 +8,5 @@ if __name__ == "__main__":
 
 
 mylambda = lambda x, y: print(x, y)
+
+# suck your mum
